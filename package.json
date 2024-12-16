@@ -58,6 +58,7 @@
 		"vite": "^6.0.0"
 	},
 	"dependencies": {
+		"18": "^0.0.0",
 		"@neondatabase/serverless": "^0.9.4",
 		"@oslojs/crypto": "^1.0.1",
 		"@oslojs/encoding": "^1.1.0",
@@ -69,5 +70,8 @@
 		"mammoth": "^1.8.0",
 		"pdf-lib": "^1.17.1",
 		"pg": "^8.13.1"
+	},
+	"engines": {
+		"node": "18.x"
 	}
 }
