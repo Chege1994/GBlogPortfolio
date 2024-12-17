@@ -29,11 +29,15 @@
 </script>
 
 <div class="container mx-auto mt-10 p-5">
-	<h1 class="mb-5 text-4xl font-bold">My Projects</h1>
+	<h1 class="mb-5 text-4xl font-bold">პროექტები</h1>
 
 	<!-- Buttons to open or close all accordions -->
-	<Button on:click={open_all} class="mb-4">Open All</Button>
-	<Button on:click={close_all}>Close All</Button>
+	<Button class="text-md mb-4 bg-gray-900 text-white hover:bg-gray-800" on:click={open_all}
+		>გაშალე ყველა</Button
+	>
+	<Button class="text-md mb-4 bg-gray-900 text-white hover:bg-gray-800" on:click={close_all}
+		>ჩაკეცე ყველა</Button
+	>
 
 	<!-- Accordion displaying the list of projects -->
 	<Accordion multiple>
@@ -46,7 +50,7 @@
 					target="_blank"
 					class="text-blue-600 hover:underline dark:text-blue-500"
 				>
-					View Project
+					პროექტის ნახვა
 				</a>
 			</AccordionItem>
 		{/each}

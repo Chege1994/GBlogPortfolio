@@ -81,7 +81,7 @@
 		</div>
 
 		<!-- Comment form -->
-		<h2 class="mt-8 text-xl font-semibold">Leave a Comment</h2>
+		<h2 class="mb-4 mt-8 text-3xl font-semibold">დაგვიტოვე კომენტარი</h2>
 		<div class="rounded-lg bg-white p-6 shadow-lg">
 			<input
 				type="text"
@@ -107,7 +107,7 @@
 				on:click={submitComment}
 				class="w-full rounded-md bg-blue-600 p-3 text-white transition hover:bg-blue-700"
 			>
-				Submit
+				კომენტარის დადასტურება
 			</button>
 		</div>
 	</div>
