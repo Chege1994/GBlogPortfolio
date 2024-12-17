@@ -12,9 +12,6 @@
 		<li><a href="/blog" class="hover:underline">Blog</a></li>
 		<li><a href="/tools/converter" class="hover:underline">Tools</a></li>
 	</ul>
-	<ul>
-		<li><DarkMode /></li>
-	</ul>
 </nav>
 
 {@render children()}

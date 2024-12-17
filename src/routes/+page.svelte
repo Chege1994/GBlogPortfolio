@@ -3,7 +3,9 @@
 </script>
 
 <!-- Hero Section below the Navbar -->
-<div class="flex min-h-screen flex-col items-center justify-center bg-gray-100">
+<div
+	class="from-slate-20 via-slate-150 flex min-h-screen flex-col items-center justify-center bg-gradient-to-r from-10% via-40% to-slate-200 to-100%"
+>
 	<div class="text-center">
 		<h1 class="text-4xl font-bold text-blue-600 md:text-6xl">Giorgi Tchanturia</h1>
 		<p class="mt-4 text-xl text-gray-700 md:text-2xl">I want to create something cool</p>
