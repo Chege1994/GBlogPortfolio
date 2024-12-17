@@ -1,4 +1,7 @@
 <script>
+	import { AccordionItem, Accordion, Button } from 'flowbite-svelte';
+
+	// Example dynamic projects
 	const projects = [
 		{
 			name: 'Project A',
@@ -12,35 +15,42 @@
 		},
 		{
 			name: 'Project C',
-			description: 'A short description of Project B.',
-			link: 'https://github.com/yourusername/project-b'
-		},
-		{
-			name: 'Project D',
-			description: 'A short description of Project B.',
-			link: 'https://github.com/yourusername/project-b'
-		},
-		{
-			name: 'Project E',
-			description: 'A short description of Project B.',
-			link: 'https://github.com/yourusername/project-b'
+			description: 'A short description of Project C.',
+			link: 'https://github.com/yourusername/project-c'
 		}
 	];
+
+	// Boolean array for controlling which accordion items are open
+	let items = Array(projects.length).fill(false);
+
+	// Functions to control opening and closing all items
+	const open_all = () => (items = items.map(() => true));
+	const close_all = () => (items = items.map(() => false));
 </script>
 
 <div class="container mx-auto mt-10 p-5">
 	<h1 class="mb-5 text-4xl font-bold">My Projects</h1>
-	<div class="grid grid-cols-1 gap-6 md:grid-cols-2">
-		{#each projects as project}
-			<div class="rounded-lg bg-white p-5 shadow-lg transition-shadow hover:shadow-xl">
-				<h2 class="mb-2 text-2xl font-semibold">{project.name}</h2>
-				<p class="mb-4 text-gray-700">{project.description}</p>
-				<a href={project.link} target="_blank" class="text-blue-500 hover:underline">
+
+	<!-- Buttons to open or close all accordions -->
+	<Button on:click={open_all} class="mb-4">Open All</Button>
+	<Button on:click={close_all}>Close All</Button>
+
+	<!-- Accordion displaying the list of projects -->
+	<Accordion multiple>
+		{#each projects as project, index}
+			<AccordionItem bind:open={items[index]}>
+				<span slot="header">{project.name}</span>
+				<p class="mb-2 text-gray-500 dark:text-gray-400">{project.description}</p>
+				<a
+					href={project.link}
+					target="_blank"
+					class="text-blue-600 hover:underline dark:text-blue-500"
+				>
 					View Project
 				</a>
-			</div>
+			</AccordionItem>
 		{/each}
-	</div>
+	</Accordion>
 </div>
 
 <style>
